@@ -114,6 +114,31 @@ function App() {
   });
 
   const displayNumber = (number) => {
+    const getNumberImgLink = (number) => {
+      switch (number) {
+        case "1":
+          return "https://i.ibb.co/XCV2N2T/1.png";
+        case "2":
+          return "https://i.ibb.co/qF5r8Rk/2.png";
+        case "3":
+          return "https://i.ibb.co/S7h72fK/3.png";
+        case "4":
+          return "https://i.ibb.co/vsq8cM9/4.png";
+        case "5":
+          return "https://i.ibb.co/1XLcWgy/5.png";
+        case "6":
+          return "https://i.ibb.co/W5NHVcS/6.png";
+        case "7":
+          return "https://i.ibb.co/tqtYcJ6/7.png";
+        case "8":
+          return "https://i.ibb.co/s5LNQvn/8.png";
+        case "9":
+          return "https://i.ibb.co/3hdVqZt/9.png";
+        default:
+          return "https://i.ibb.co/6XVPFQk/0.png";
+      }
+    };
+
     const array = number.toString().split("");
     return (
       <div className="flex">
@@ -122,8 +147,8 @@ function App() {
             <img
               key={index}
               className="z-50"
-              src={`../assets/sprites/${number}.png`}
-              alt="bird"
+              src={getNumberImgLink(number)}
+              alt="score"
             />
           );
         })}
@@ -135,7 +160,7 @@ function App() {
     <>
       <div
         style={{
-          backgroundImage: "url(../assets/sprites/background-night.png)",
+          backgroundImage: "url(https://i.ibb.co/VvtCs97/background-night.png)",
         }}
         className="h-screen w-screen relative overflow-hidden"
       >
@@ -149,9 +174,11 @@ function App() {
         >
           <img
             className="h-[30px] w-[40px] "
-            src={`../assets/sprites/bluebird-${
-              isTouching ? "upflap" : "downflap"
-            }.png`}
+            src={
+              isTouching
+                ? "https://i.ibb.co/pxMfCkn/bluebird-upflap.png"
+                : "https://i.ibb.co/NNBKL1Z/bluebird-downflap.png"
+            }
             alt="bird"
           />
         </div>
@@ -168,7 +195,7 @@ function App() {
                 <img
                   style={{ height: `${height}px` }}
                   className="rotate-180 w-[60px]"
-                  src="../assets/sprites/pipe-green.png"
+                  src="https://i.ibb.co/XJQLwwh/pipe-green.png"
                   alt="pipe"
                   onContextMenu={(e) => e.preventDefault()}
                   onTouchStart={(e) => e.preventDefault()}
@@ -184,7 +211,7 @@ function App() {
                 <img
                   className=" w-[60px]"
                   style={{ height: `${height}px` }}
-                  src="../assets/sprites/pipe-green.png"
+                  src="https://i.ibb.co/XJQLwwh/pipe-green.png"
                   alt="pipe"
                   onContextMenu={(e) => e.preventDefault()}
                   onTouchStart={(e) => e.preventDefault()}
@@ -209,5 +236,29 @@ function App() {
 }
 
 export default App;
-
-// dsa, mat, cao, de_prac, cao_par
+// https://i.ibb.co/6XVPFQk/0.png
+// https://i.ibb.co/XCV2N2T/1.png
+// https://i.ibb.co/qF5r8Rk/2.png
+// https://i.ibb.co/S7h72fK/3.png
+// https://i.ibb.co/vsq8cM9/4.png
+// https://i.ibb.co/1XLcWgy/5.png
+// https://i.ibb.co/W5NHVcS/6.png
+// https://i.ibb.co/tqtYcJ6/7.png
+// https://i.ibb.co/s5LNQvn/8.png
+// https://i.ibb.co/3hdVqZt/9.png
+// https://i.ibb.co/31NvfRp/background-day.png
+// https://i.ibb.co/VvtCs97/background-night.png
+// https://i.ibb.co/MVHXR67/base.png
+// https://i.ibb.co/NNBKL1Z/bluebird-downflap.png
+// https://i.ibb.co/cTSfzn8/bluebird-midflap.png
+// https://i.ibb.co/pxMfCkn/bluebird-upflap.png
+// https://i.ibb.co/jVkc9KD/gameover.png
+// https://i.ibb.co/ggMvjwx/message.png
+// https://i.ibb.co/XJQLwwh/pipe-green.png
+// https://i.ibb.co/wKP00ZW/pipe-red.png
+// https://i.ibb.co/QCt5K0k/redbird-downflap.png
+// https://i.ibb.co/vZ94Tgq/redbird-midflap.png
+// https://i.ibb.co/Cn3gXgR/redbird-upflap.png
+// https://i.ibb.co/q7X1B4x/yellowbird-downflap.png
+// https://i.ibb.co/wRh8P3K/yellowbird-midflap.png
+// https://i.ibb.co/HzX2x87/yellowbird-upflap.png

@@ -224,7 +224,7 @@ function App() {
         <div className="">
           <img
             className="absolute bottom-0 h-[50px] w-screen "
-            src="../assets/sprites/base.png"
+            src="https://i.ibb.co/MVHXR67/base.png"
             alt="base"
             onContextMenu={(e) => e.preventDefault()}
             onTouchStart={(e) => e.preventDefault()}
